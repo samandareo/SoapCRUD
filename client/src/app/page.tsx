@@ -27,7 +27,7 @@ export default function Home() {
   const cutEmail = (email: string) => {
     const atIndex = email.indexOf("@");
     let before = email.slice(0, atIndex);
-    let after = email.slice(atIndex);
+    const after = email.slice(atIndex);
     if (before.length > 5) {
       before = before.slice(0, 3) + "..." + before.slice(-2);
     }
@@ -70,7 +70,7 @@ export default function Home() {
         const res_users = usersResponse["users"];
 
         if (res_users) {
-          const parsedUsers = res_users.map((user: any) => {
+          const parsedUsers = res_users.map((user: typeUser) => {
             return {
               id: user.id[0],
               name: user.name[0],
