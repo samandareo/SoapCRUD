@@ -4,7 +4,6 @@ import { parseString } from "xml2js";
 import { useState, useEffect } from "react";
 import editIcon from "@/app/image/edit.svg";
 import Image from "next/image";
-import { before } from "node:test";
 
 const ServerURL = "http://localhost:4000/soap";
 
